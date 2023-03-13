@@ -7,6 +7,6 @@ RUN apt-get -y upgrade
 
 ### ADD YOUR TOOLS HERE
 RUN apt -y install python3 python3-pip git nano
-RUN git clone https://github.com/sami/mipnerf.git
+COPY . mipnerf
 WORKDIR /mipnerf
 RUN pip3 install -r requirements.txt
